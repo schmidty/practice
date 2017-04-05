@@ -1,0 +1,9 @@
+{
+    "require": {
+        "slim/slim": "^3.0",
+        "symfony/yaml": "^3.2",
+        "doctrine/dbal": "^2.5",
+        "twitter/bootstrap": "^3.3",
+        "components/jquery": "^3.2"
+    }
+}
