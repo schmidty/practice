@@ -1,0 +1,9 @@
+doctrine:
+    dbal: 
+        driver: pdo_mysql
+        dbname: practice
+        user: root
+        password: password
+        charset: UTF8
+
+

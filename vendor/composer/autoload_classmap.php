@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Config\\Params' => $baseDir . '/src/Config/Params.php',
+    'Database\\Connection' => $baseDir . '/src/Database/Connection.php',
+    'Entity\\Library' => $baseDir . '/src/Entity/Library.php',
+    'Practice\\AbstractResource' => $baseDir . '/src/Practice/AbstractResource.php',
 );

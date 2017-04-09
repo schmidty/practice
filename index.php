@@ -3,17 +3,12 @@
 
 require 'vendor/autoload.php';
 
-use Doctrine\DBAL\DriverManager;
+use Database\Connection;
 
-$conn = DriverManager::getConnection([
-	'dbname' => 'practice',
-	'user'   => 'root',
-	'password' => 'password',
-	'host' => 'localhost',
-	'driver' => 'pdo_mysql'
-]);
 
 $app = new Slim\App();
+$conn = Connection::Connect();
+
 
 $app->get('/books', function() use($conn) {
 	echo "Books<br/>\n";
@@ -96,6 +91,20 @@ $app->get('/books/clear', function() use ($conn) {
 	if ($result) {
 		echo "All values deleted from database<br/>\n";
 	}
+});
+
+
+$app->get('/', function() use ($conn) {
+	echo "Books:<br/>\n";
+
+	$objects = $conn->query("SELECT * FROM library");
+
+	foreach($objects as $results) {
+		foreach($results as $key => $vals) {
+			echo sprintf("%s  -  %s<br/>\n", $key, $vals);
+		}
+	}
+	
 });
 
 

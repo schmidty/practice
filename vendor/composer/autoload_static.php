@@ -105,12 +105,20 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
         ),
     );
 
+    public static $classMap = array (
+        'Config\\Params' => __DIR__ . '/../..' . '/src/Config/Params.php',
+        'Database\\Connection' => __DIR__ . '/../..' . '/src/Database/Connection.php',
+        'Entity\\Library' => __DIR__ . '/../..' . '/src/Entity/Library.php',
+        'Practice\\AbstractResource' => __DIR__ . '/../..' . '/src/Practice/AbstractResource.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11::$classMap;
 
         }, null, ClassLoader::class);
     }
