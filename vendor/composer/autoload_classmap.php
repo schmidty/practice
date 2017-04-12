@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Commands\\GreetCommand' => $baseDir . '/src/Commands/GreetCommand.php',
     'Config\\Params' => $baseDir . '/src/Config/Params.php',
     'Database\\Connection' => $baseDir . '/src/Database/Connection.php',
     'Entity\\Library' => $baseDir . '/src/Entity/Library.php',
