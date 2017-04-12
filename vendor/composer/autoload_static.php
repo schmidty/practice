@@ -12,6 +12,11 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zend\\EventManager\\' => 18,
+            'Zend\\Code\\' => 10,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -25,6 +30,7 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'PackageVersions\\' => 16,
         ),
         'I' => 
         array (
@@ -36,6 +42,7 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
         ),
         'D' => 
         array (
+            'Doctrine\\DBAL\\Migrations\\' => 25,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -43,6 +50,14 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zend\\EventManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-eventmanager/src',
+        ),
+        'Zend\\Code\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -75,6 +90,10 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'PackageVersions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ocramius/package-versions/src/PackageVersions',
+        ),
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
@@ -82,6 +101,10 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'Doctrine\\DBAL\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/migrations/lib/Doctrine/DBAL/Migrations',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -100,6 +123,10 @@ class ComposerStaticInit137b819abb1e1c02e6670b43a9f4af11
     public static $prefixesPsr0 = array (
         'P' => 
         array (
+            'ProxyManager\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',

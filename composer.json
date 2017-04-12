@@ -5,12 +5,12 @@
         "doctrine/dbal": "^2.5",
         "twitter/bootstrap": "^3.3",
         "components/jquery": "^3.2",
-        "symfony/console": "^3.2"
+        "symfony/console": "^3.2",
+        "doctrine/migrations": "^1.5"
     },
 	"autoload": {
 		"classmap": [
-			"src/",
-			"Commands/"
+			"src/"
 		]
 	}
 }
