@@ -32,11 +32,11 @@ final class Versions
   'symfony/console' => 'v3.2.7@c30243cc51f726812be3551316b109a2f5deaf8d',
   'symfony/debug' => 'v3.2.7@56f613406446a4a0a031475cfd0a01751de22659',
   'symfony/polyfill-mbstring' => 'v1.3.0@e79d363049d1c2128f133a2667e4f4190904f7f4',
-  'symfony/yaml' => 'v3.2.6@093e416ad096355149e265ea2e4cc1f9ee40ab1a',
+  'symfony/yaml' => 'v3.2.7@62b4cdb99d52cb1ff253c465eb1532a80cebb621',
   'twitter/bootstrap' => 'v3.3.7@0b9c4a4007c44201dce9a6cc1a38407005c26c86',
   'zendframework/zend-code' => '3.1.0@2899c17f83a7207f2d7f53ec2f421204d3beea27',
   'zendframework/zend-eventmanager' => '3.1.0@c3bce7b7d47c54040b9ae51bc55491c72513b75d',
-  '__root__' => '9999999-dev@4eebe64945ae244a7405dcf42c5da170564d6050',
+  '__root__' => 'dev-dev@1cc7a1f39ad99589c03d2ba0cce326af65e23da6',
 );
 
     private function __construct()
