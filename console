@@ -4,10 +4,35 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Commands\GreetCommand;
+use Doctrine\Common\ClassLoader;
+use Doctrine\DBAL\Migrations\Tools\Console\Command as MigrationCommands;
 
-$application = new Application();
+$classLoader = new ClassLoader('Doctrine\DBAL\Migrations', 'migrations');
+$classLoader->register();
+
+$commands = new Application('Doctrine Command Line Interface' . \Doctrine\Common\Version::VERSION);
+$commands->setCatchExceptions(true);
+
+$params = \Config\Params::readDbal();
+$db = \Doctrine\DBAL\DriverManager::getConnection($params);
+
+$helperSet = new \Symfony\Component\Console\Helper\HelperSet(array(
+    'db' => new \Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper($db),
+    'dialog' => new \Symfony\Component\Console\Helper\QuestionHelper(),
+));
+
+$commands->setHelperSet($helperSet);
+
+$commands->addCommands([
+    new MigrationCommands\DiffCommand(),
+    new MigrationCommands\ExecuteCommand(),
+    new MigrationCommands\GenerateCommand(),
+    new MigrationCommands\MigrateCommand(),
+    new MigrationCommands\StatusCommand(),
+    new MigrationCommands\VersionCommand(),
+]);
 
 # add our commands
-$application->add(new GreetCommand());
+$commands->add(new GreetCommand());
 
-$application->run();
+$commands->run();
